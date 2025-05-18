@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💥 Stackmine by Moulendu</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Stackmine</h1>
+        </div>
+        <div class="wallet">
+            Current balance: ₹<span id="balance">1000</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <label for="bet">Enter the amount</label>
+            <input type="number" id="bet" placeholder="Enter amount" />
+
+            <label for="bombCount">Enter the number of bombs in the game</label>
+            <input type="number" id="bombCount" placeholder="Bombs (1–10)" min="1" max="10" value="3" />
+
+            <button class="game_start" onclick="startGame()">Start the game!! 💣</button>
+
+            <button id="resetButton" class="game_start" style="margin-top: 20px; background-color: rgb(124, 67, 157);">
+                Reset Balance
+            </button>
+        </div>
+        <div class="right">
+            <div id="gameBoard" class="board"></div>
+        </div>
+    </div>
+    <div id="message" style="text-align: center; margin-top: 20px; font-size: 20px;"></div>
+    <audio src="game_over.mp3" preload="auto" id="gameOverSound"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
